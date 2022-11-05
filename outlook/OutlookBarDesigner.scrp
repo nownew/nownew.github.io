@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<screenpart BackgroundColor="Transparent" HorizonScrollbar="Hidden" Margin="0px" Padding="0px" Serializer="DBFX.Serializer.FormPartSerializer">
+
+  <xns>
+    <ns k="wc"  n="DBFX.Web.Controls" />
+    <ns k="lc"  n="DBFX.Web.LayoutControls" />
+    <ns k="dv"  n="DBFX.Design" />
+  </xns>
+
+  <controls>
+
+    <c T="wc:Panel"  Shadow="none" BorderWidth="0px" Margin="2px 0px 2px 0px" MinWidth="230px" >
+    <controls>
+
+    <c T="wc:BreakLine" BackgroundColor="lightgray"  BorderWidth="0px"    Height="1px" Margin="2px" />
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="切换按钮栏高度:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;ControlHeight&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="切换按钮位置:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:ComboBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;ControlBtnPosition&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" >
+        <Items>
+              <Item Text="左下" Value="bottom-left"  ImageUrl="" />
+              <Item Text="中下" Value="bottom-center"  ImageUrl="" />
+              <Item Text="右下" Value="bottom-right"  ImageUrl="" />
+              <Item Text="左上" Value="top-left"  ImageUrl="" />
+              <Item Text="中上" Value="top-center"  ImageUrl="" />
+              <Item Text="右上" Value="top-right"  ImageUrl="" />
+         </Items>
+    </c>
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="标题栏图片:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="dv:TypeEditors.ImageChooseButton" Display="block"  Margin="2px 14px 2px 16px" BindProperty="HeaderImgUrl" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="标题栏标题:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;HeaderTitle&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="标题栏高度:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;HeaderHeight&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="标题栏背景色:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:ColorPicker" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;HeaderBgC&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="标题文字颜色:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:ColorPicker" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;HeaderTextC&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+    <c T="wc:BreakLine" />
+    <c T="wc:Label" Text="标题文字大小:" Margin="4px 2px 2px 16px" Float="left"/>
+    <c T="wc:TextBox" Display="block" Height="26px" Margin="2px 14px 2px 16px" DataBindings="{&quot;Path&quot;:&quot;HeaderTextS&quot;,&quot;Mode&quot;:&quot;OneWay&quot;,&quot;Source&quot;:&quot;&quot;}" />
+
+      </controls>
+    </c>
+
+    <c T="dv:TypeEditors.EventList" Name="EventListBox" Text="事件处理程序" Shadow="node" Margin="2px 0px 2px 0px" MinWidth="64px">
+    </c>
+  </controls>
+</screenpart>

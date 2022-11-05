@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OutlookBar</title>
+    <style>
+        body{
+            /*background-color: #666666;*/
+        }
+    </style>
+    <link rel="stylesheet" href="OutlookBar.css">
+
+    <script src="https://lc.dbazure.cn/dbfx/dbfx.js"></script>
+    <script src="https://lc.dbazure.cn/dbfx/dbfx.data.js"></script>
+
+    <script src="https://lc.dbazure.cn/dbfx/dbfx.commodel.js"></script>
+    <script src="https://lc.dbazure.cn/dbfx/dbfx.serializer.js"></script>
+    <script src="https://lc.dbazure.cn/dbfxui/dbfx.web.controls.js"></script>
+    <script src="https://lc.dbazure.cn/dbfx/dbfx.app.js"></script>
+
+    <script src="OutlookBar.js"></script>
+</head>
+<body>
+
+
+<script>
+    var dm = new DBFX.Web.NavControls.OutlookBar();
+    document.body.appendChild(dm.VisualElement);
+    dm.Width = '220px';
+    dm.Height = "600px";
+    dm.ItemSource = [{Items:[1,2,3]},{Items:[1,2,3,4,5]},{Items:[1,2,3,2,4]},4,6,{Items:[1,2,3]},8];
+
+    dm.ControlBtnPosition = "top-left";
+    dm.ControlBtnPosition = "bottom-left";
+
+    dm.Theme = "midnight";
+
+    // dm.FirstClassBgc = "red";
+    document.body.onclick = function (ev) {
+        console.log(ev.target);
+    }
+
+</script>
+</body>
+</html>

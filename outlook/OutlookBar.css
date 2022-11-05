@@ -1,0 +1,328 @@
+
+.OutlookBar {
+    /*OutlookBar背景色设置*/
+    --OutlookBar-backgroundColor:#cbcbcb;
+    /*OutlookBar头部区域背景色设置*/
+    --OutlookBar_Header-backgroundColor: #2b68dc;
+    /*OutlookBar头部区域字体颜色设置*/
+    --OutlookBar_HeaderText-color:#f9f9f9;
+
+    /*OutlookBar控制区域设置*/
+    --OutlookBar_Control-fontSize:14px;
+    --OutlookBar_Control-backgroundColor:#1e5186;
+
+    /*OutlookBar 菜单区域设置*/
+    --OutlookBar_Body-backgroundColor:#1e5186;
+
+    /*OutlookBar 一级菜单样式设置*/
+    --OutlookBarItemBar-backgroundColor:#1e5186;
+    --OutlookBarItemBar-hover-backgroundColor:#cbcbcb;
+    --OutlookBarItemBar-color:#f9f9f9;
+    --OutlookBarItemBar-fontSize:14px;
+    /*选中样式*/
+    --OutlookBarItemBar_Selected-fontSize:16px;
+    --OutlookBarItemBar_Selected-backgroundColor:#1e5186;
+    --OutlookBarItemBar_Selected-color:white;
+
+
+    /*OutlookBar1 二级菜单样式设置*/
+    --OutlookBarItem1Bar-backgroundColor:#70cb98;
+    --OutlookBarItem1Bar-color:#393939;
+    --OutlookBarItem1Bar-fontSize:12px;
+    /*选中样式*/
+    --OutlookBarItem1Bar_Selected-fontSize:14px;
+    --OutlookBarItem1Bar_Selected-backgroundColor:#1e5186;
+    --OutlookBarItem1Bar_Selected-color:white;
+
+    /*滚动条样式*/
+    --ScrollBar_Color:#858889;
+    --ScrollBar_Width:6px;
+    --ScrollBar_BorderRadius:3px;
+
+}
+
+.OutlookBar {
+    background-color: var(--OutlookBar-backgroundColor);
+    height: 100%;
+    width: 100%;
+    border: 1px solid #3c3f41;
+    position: relative;
+    box-sizing: border-box;
+    /*overflow: hidden;*/
+
+    /*文字取消选中效果*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*默认展开样式*/
+.OutlookBar .OutlookBar_Header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+    position: absolute;
+    overflow: hidden;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    background-color: var(--OutlookBar_Header-backgroundColor);
+    height: 44px;
+}
+
+.OutlookBar_Header .OutlookBar_HeaderText {
+    font-size: 16px;
+    /*margin-left: 14px;*/
+    display: inline-block;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    /*text-overflow: ellipsis;*/
+    color: var(--OutlookBar_HeaderText-color);
+}
+
+.OutlookBar_HeaderImage {
+    max-height: 40px;
+    max-width: 40px;
+    /*margin-left: 16px;*/
+}
+
+/*-------------------折叠样式---------------------*/
+.OutlookBar .OutlookBar_Header_fold {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    overflow: hidden;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    background-color: var(--OutlookBar_Header-backgroundColor);
+    height: 44px;
+
+    justify-content: center;
+}
+
+.OutlookBar_Header_fold .OutlookBar_HeaderText {
+
+    display: none;
+}
+
+
+.OutlookBar .OutlookBar_Control {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+
+    font-size: var(--OutlookBar_Control-fontSize);
+    background-color: var(--OutlookBar_Control-backgroundColor);
+}
+
+.OutlookBar .OutlookBar_ControlImage {
+    cursor: pointer;
+    max-height: 26px;
+    display: inline-block;
+
+}
+
+.OutlookBar .OutlookBar_Body {
+    overflow: auto;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 44px;
+    bottom: 35px;
+    background-color: var(--OutlookBar_Body-backgroundColor);
+    /*padding-left: 5px;*/
+}
+
+/*设置滚动条样式 start*/
+.OutlookBar .OutlookBar_Body::-webkit-scrollbar {
+    width: var(--ScrollBar_Width,6px);
+    /*background-color: var(--OutlookBar_Body-backgroundColor);*/
+    background-color: transparent;
+
+}
+
+.OutlookBar .OutlookBar_Body::-webkit-scrollbar-track {
+    /*background-color: var(--OutlookBar_Body-backgroundColor);*/
+
+}
+
+.OutlookBar .OutlookBar_Body::-webkit-scrollbar-thumb {
+    background-color: var(--ScrollBar_Color,#858889);
+    border-radius: var(--ScrollBar_BorderRadius);
+}
+/*设置滚动条样式 end*/
+
+
+.OutlookBarItem .OutlookBarItemBar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+    height: 40px;
+
+    background-color: var(--OutlookBarItemBar-backgroundColor);
+    color: var(--OutlookBarItemBar-color);
+    font-size: var(--OutlookBarItemBar-fontSize);
+}
+
+/*选中样式设置*/
+.OutlookBar .OutlookBarItem .OutlookBarItemBar_Selected{
+
+
+    background-color: var(--OutlookBarItemBar_Selected-backgroundColor);
+    color: var(--OutlookBarItemBar_Selected-color);
+    font-size: var(--OutlookBarItemBar_Selected-fontSize);
+}
+
+.OutlookBar  .OutlookBarItem1 .OutlookBarItemBar_Selected{
+    background-color: var(--OutlookBarItem1Bar_Selected-backgroundColor);
+    color: var(--OutlookBarItem1Bar_Selected-color);
+    font-size: var(--OutlookBarItem1Bar_Selected-fontSize);
+}
+
+
+
+.OutlookBarItem .OutlookBarItemBar .OutlookBarItemECImage {
+     min-width: 20px;
+     min-height: 20px;
+     max-width: 35px;
+     max-height: 35px;
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+
+ }
+
+.OutlookBarItem .OutlookBarItemImage {
+    max-height: 35px;
+    max-width: 35px;
+}
+
+.OutlookBarItem .OutlookBarItemBar .OutlookBarItemText {
+    margin-left: 10px;
+    /*vertical-align: top;*/
+}
+
+/*折叠样式*/
+.OutlookBarItem .OutlookBarItemBar_fold {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+    height: 40px;
+
+    background-color: var(--OutlookBarItemBar-backgroundColor);
+    color: var(--OutlookBarItemBar-color);
+    font-size: var(--OutlookBarItemBar-fontSize);
+}
+
+.OutlookBarItem .OutlookBarItemBar_fold:hover {
+    background-color: var(--OutlookBarItemBar-hover-backgroundColor);
+}
+
+.OutlookBarItem .OutlookBarItemBar_fold .OutlookBarItemECImage{
+    display: none;
+}
+
+.OutlookBarItem .OutlookBarItemBar_fold .OutlookBarItemText{
+    display: none;
+}
+
+
+.OutlookBarItem .OutlookBarItemsPanel {
+    display: block;
+}
+
+.OutlookBarItem .OutlookBarItemsPanel_hidden {
+    display: none;
+}
+
+.OutlookBarItem1 .OutlookBarItemBar {
+    height: 35px;
+    background-color: var(--OutlookBarItem1Bar-backgroundColor);
+    color: var(--OutlookBarItem1Bar-color);
+    font-size: var(--OutlookBarItem1Bar-fontSize);
+}
+
+.OutlookBarItemBar:hover{
+    background-color: var(--OutlookBarItemBar-hover-backgroundColor);
+}
+
+.OutlookBarItem1 .OutlookBarItemBar .OutlookBarItemECImage {
+    min-width: 15px;
+    min-height: 15px;
+    max-width: 30px;
+    max-height: 30px;
+    display: none;
+}
+
+.OutlookBarItem1 .OutlookBarItemBar .OutlookBarItemImage {
+    max-height: 30px;
+    max-width: 30px;
+    min-width: 15px;
+    min-height: 15px;
+    display: none;
+}
+
+.OutlookBarItem1 .OutlookBarItemBar .OutlookBarItemText {
+    margin-left: 45px;
+}
+
+.OutlookBarItem2 .OutlookBarItemBar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+    height: 30px;
+}
+
+
+
+

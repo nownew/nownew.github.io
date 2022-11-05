@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="测试css变量.css">
+</head>
+<body>
+<div id="div">
+    <div id="bar">
+        <img src="./moretree.png" alt="">
+        <span>深蓝软件砚台智能云深蓝软件砚台智能云</span>
+    </div>
+</div>
+
+<div id="button">
+
+</div>
+
+<div id="color"></div>
+<script>
+    var btn = document.getElementById("button");
+    btn.onclick = function (ev) {
+        console.log("点击了");
+    }
+
+    try{
+
+
+
+        //设置css变量值
+        // btn.style.setProperty("--button-width","150px");
+        // btn.style.setProperty("--button-height","150px");
+        btn.style.setProperty("--button-color","#555");
+
+        //读取css变量值  一定是在JavaScript中设置的属性值 才可以获取值
+        var btnW = btn.style.getPropertyValue("--button-width");
+        console.log(btnW);
+
+        var btnH = btn.style.getPropertyValue("--button-height");
+        console.log(btnH);
+
+        var btnC = btn.style.getPropertyValue("--button-color");
+        console.log(btnC);
+
+        //移除css变量
+        // btn.style.removeProperty("--button-height");
+
+        // btn.style.width = btn.style.getPropertyValue("--button-width");
+        // btn.style.height = btn.style.getPropertyValue("--button-height");
+
+    }catch (e){
+        console.log(e);
+    }
+
+
+
+</script>
+</body>
+</html>
