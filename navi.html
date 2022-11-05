@@ -1,0 +1,62 @@
+<head>
+ <meta charset="UTF-8"> 
+ <title>Title</title>
+ <link href="css/iconfont1.css" type="text/css" rel="stylesheet">
+ <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+ <style>
+ *{  margin: 0;  padding: 0;  }
+ ol,ul,li{  list-style: none;  }
+ .sideNav{  width: 200px;  position: fixed;  top:0;  bottom: 0;  background-color:#292929;  color: white;  }
+ .oneStair:hover{  background-color: #111;  text-shadow: 0px 0px 2px #EEEEEE;}
+ .titleStair{  font-size: 16px;  line-height: 45px;  padding: 0 12px;  box-sizing: border-box;  }
+ .titleStair *{  display: inline-block;  }
+ .titleStair>h4{  text-indent: 1em;  }
+ .pullDown{  float: right;  }
+ .pullDown1{  transform:rotate(-90deg);  }
+ .stairUL{  display: none;  font-size: 13px;  padding-left: 40px;  padding-right: 12px;  box-sizing: border-box;  }
+ .stairUL>li{  display: flex;  align-items:center;  padding: 2px 0;  }
+ .stairUL>li>i{  margin-right: 2px;  }
+ </style>
+</head>
+<body>
+<div class="sideNav">
+ <div class="oneStair">
+ <div class="titleStair">
+ <i class="iconfont icon-home"></i><h4>一级菜单1</h4><i class="iconfont icon-xiajiantou pullDown pullDown1"></i>
+ </div>
+ <ul class="stairUL">
+ <li><i class="iconfont icon-iconfontwendang"></i>子级菜单1</li>
+ <li><i class="iconfont icon-iconfontwendang"></i>子级菜单2</li>
+ <li><i class="iconfont icon-iconfontwendang"></i>子级菜单3</li>
+ </ul>
+ </div>
+ <div class="oneStair">
+ <div class="titleStair">
+ <i class="iconfont icon-gongnengdingyi"></i><h4>一级菜单2</h4><i class="iconfont icon-xiajiantou pullDown pullDown1"></i>
+ </div>
+ <ul class="stairUL">
+ <li><i class="iconfont icon-iconfontwendang"></i>子级菜单1</li>
+ <li><i class="iconfont icon-iconfontwendang"></i>子级菜单2</li>
+ <li><i class="iconfont icon-iconfontwendang"></i>子级菜单3</li>
+ </ul>
+ </div>
+ <div class="oneStair">
+ <div class="titleStair">
+ <i class="iconfont icon-tiaoshi"></i><h4>一级菜单3</h4><i class="iconfont icon-xiajiantou pullDown pullDown1"></i>
+ </div>
+ <ul class="stairUL">
+ <li><i class="iconfont icon-iconfontwendang"></i>子级菜单1</li>
+ <li><i class="iconfont icon-iconfontwendang"></i>子级菜单2</li>
+ <li><i class="iconfont icon-iconfontwendang"></i>子级菜单3</li>
+ </ul>
+ </div>
+</div>
+</body>
+<script>
+ $(function(){
+ $(".pullDown").click(function(){
+ $(this).toggleClass("pullDown1");
+ $(this).parent().parent().children(".stairUL").slideToggle();
+ });
+ });
+</script>
