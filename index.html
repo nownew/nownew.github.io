@@ -1,303 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>首页</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="main">
-        <div class="header">
-            <div class="header_box">
-                <div class="left">
-                    <img src="picture/logo.png" alt="">
-                </div>
-                <div class="right">
-                    <div class="top">
-                        <span>客服电话：0000-000-000</span>
-                        <span>China（中文） |  English（英文）</span>
-                    </div>
-                    <div class="middle">
-                        <input type="text">
-                    </div>
-                    <div class="bot">           
-                        <a href="" class="on">首页</a>
-                        <a href="">企业简介</a>
-                        <a href="">下属企业</a>
-                        <a href="">新闻中心</a>
-                        <a href="">主营业务</a>
-                        <a href="">企业文化</a>
-                        <a href="">企业招聘</a>
-                        <a href="">联系我们</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="banner">
-            <img src="picture/banner.jpg" alt="">
-        </div>
-        <div class="news">
-            <div class="new_box">
-                <div class="title">
-                    <p>新闻中心</p>
-                    <p>媒体举报</p>
-                    <p>联系我们</p>
-                </div>
-                <div class="new_list">
-                    <div class="news_item">
-                        <p>
-                            <span class="tit">从中国企业企业文化的现实出发...</span>
-                            <span class="time">[0000-00-00]</span>
-                        </p>
-                        <p>
-                            <span class="tit">从中国企业企业文化的现实出发...</span>
-                            <span class="time">[0000-00-00]</span>
-                        </p>
-                        <p>
-                            <span class="tit">从中国企业企业文化的现实出发...</span>
-                            <span class="time">[0000-00-00]</span>
-                        </p>
-                        <p>
-                            <span class="tit">从中国企业企业文化的现实出发...</span>
-                            <span class="time">[0000-00-00]</span>
-                        </p>
-                        <p>
-                            <span class="tit">从中国企业企业文化的现实出发...</span>
-                            <span class="time">[0000-00-00]</span>
-                        </p>
-                        <p>
-                            <span class="tit">从中国企业企业文化的现实出发...</span>
-                            <span class="time">[0000-00-00]</span>
-                        </p>
-                        <p>
-                            <span class="tit">从中国企业企业文化的现实出发...</span>
-                            <span class="time">[0000-00-00]</span>
-                        </p>
-                        <p>
-                            <span class="tit">从中国企业企业文化的现实出发...</span>
-                            <span class="time">[0000-00-00]</span>
-                        </p>
-                    </div>
-                    <div class="news_item">
-                        <div class="new_middle">
-                            <div class="tips">
-                                111
-                            </div>
-                            <div class="news_img">
-                                <img src="picture/goods1.jpg" alt="">
-                            </div>
-                            <div class="msg">
-                                <p class="tit">
-                                    媒体报道
-                                </p>
-                                <p class="con">报道新闻的内容内容内容内容
-                                    内容...[详情]</p>
-                            </div>
-                        </div>
-                        <div class="new_middle">
-                            <div class="tips">
-                                111
-                            </div>
-                            
-                            <div class="news_img">
-                                <img src="picture/goods1.jpg" alt="">
-                            </div>
-                            <div class="msg">
-                                <p class="tit">
-                                    媒体报道
-                                </p>
-                                <p class="con">报道新闻的内容内容内容内容
-                                    内容...[详情]</p>
-                            </div>
-                        </div>
-                        <div class="new_middle">
-                            <div class="tips">
-                                111
-                            </div>
-                            <div class="news_img">
-                                <img src="picture/goods1.jpg" alt="">
-                            </div>
-                            <div class="msg">
-                                <p class="tit">
-                                    媒体报道
-                                </p>
-                                <p class="con">报道新闻的内容内容内容内容
-                                    内容...[详情]</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news_item">
-                        <div class="top_img">
-                            <img src="picture/good2.jpg" alt="">
-                        </div>
-                        <p>服务热线：0000-000-000</p>
-                        <p>企业电话：000-00000000</p>
-                        <p>企业地址：xxxxxxxxxxxxxxxx
-                            xxxxxx</p>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-        <div class="yw">
-            <div class="yw_box">
-                <div class="title">
-                    主营业务
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="font/iconfont.css" />
+    <link rel="stylesheet" href="font1/iconfont.css" />
+    <link rel="stylesheet" href="css.css" />
+    <title>侧边栏伸缩菜单</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="nav">
+            <!--按钮-->
+            <div class="btn">
+                <div class="btn-item"></div>
+                <div class="btn-item"></div>
+                <div class="btn-item"></div>
+            </div>
+            <!--头像-->
+            <div class="icon">
+                <div class="icon-img"><img src="img/eric.png" alt="" /></div>
+                <div class="icon-con">
+                    <p>Good Day</p>
+                    <h2>Vitaliy D.</h2>
                 </div>
-                <div class="list">
-                    <div class="item">
-                        <div class="top_img">
-                            <img src="picture/goods3.jpg" alt="">
-                        </div>
-                        <div class="txt">
-                            <span>业务名称</span>
-                            <img src="picture/arrows.jpg" alt="">
-                        </div>
+            </div>
+            <div class="line"></div>
+            <div class="title">
+                <p>Menu 6</p>
+            </div>
+            <div class="menu">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><span class="iconfont icon-wenjian"></span></div>
+                    <div class="con">Dashboard</div>
+                    <div class="ricon"><span class="iconfont icon-shezhi"></span></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><span class="iconfont icon-qipao1"></span></div>
+                    <div class="con">Products</div>
+                    <div class="ricon"></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span class="iconfont icon-shexiang1"></span>
                     </div>
-                    <div class="item">
-                        <div class="top_img">
-                            <img src="picture/goods3.jpg" alt="">
-                        </div>
-                        <div class="txt">
-                            <span>业务名称</span>
-                            <img src="picture/arrows.jpg" alt="">
-                        </div>
+                    <div class="con">Campaigns</div>
+                    <div class="ricon"></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span class="iconfont icon-xiaolian"></span>
                     </div>
-                    <div class="item">
-                        <div class="top_img">
-                            <img src="picture/goods3.jpg" alt="">
-                        </div>
-                        <div class="txt">
-                            <span>业务名称</span>
-                            <img src="picture/arrows.jpg" alt="">
-                        </div>
+                    <div class="con">Sales</div>
+                    <div class="ricon"><span class="iconfont icon-caidan1"></span></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span class="iconfont icon-shexiang"></span>
                     </div>
-                    <div class="item">
-                        <div class="top_img">
-                            <img src="picture/goods3.jpg" alt="">
-                        </div>
-                        <div class="txt">
-                            <span>业务名称</span>
-                            <img src="picture/arrows.jpg" alt="">
-                        </div>
+                    <div class="con">Discount</div>
+                    <div class="ricon"></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span class="iconfont icon-wenjian1"></span>
+                    </div>
+                    <div class="con">Payouts</div>
+                    <div class="ricon"></div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="title">
+                <p>Sever 6</p>
+            </div>
+            <div class="serve">
+                <div class="item">
+                    <div class="licon"><span class="iconfont icon-caidan"></span></div>
+                    <div class="con">Software</div>
+                    <div class="ricon">
+                        <span class="iconfont icon-Dashboard"></span>
                     </div>
                 </div>
-                <div class="hf">
-                    <div class="hf_item">
-                        <div class="img">
-                            <img src="picture/icon11.jpg" alt="">
-                        </div>
-                        <div class="txt">
-                            <p class="txt1">发展历程</p>
-                            <p class="txt2">蓬勃发展，兴旺昌盛</p>
-                        </div>
-                    </div>
-                    <div class="hf_item">
-                        <div class="img">
-                            <img src="picture/icon22.jpg" alt="">
-                        </div>
-                        <div class="txt">
-                            <p class="txt1">资质荣誉</p>
-                            <p class="txt2">重视合作，确保质量，严守承诺</p>
-                        </div>
-                    </div>
-                    <div class="hf_item">
-                        <div class="img">
-                            <img src="picture/icon33.jpg" alt="">
-                        </div>
-                        <div class="txt">
-                            <p class="txt1">媒体报道</p>
-                            <p class="txt2">振兴民族产业，走在国际前沿</p>
-                        </div>
-                    </div>
-                    <div class="hf_item">
-                        <div class="img">
-                            <img src="picture/icon44.jpg" alt="">
-                        </div>
-                        <div class="txt">
-                            <p class="txt1">诚聘精英</p>
-                            <p class="txt2">有品质有市场，有改善有进步</p>
-                        </div>
-                    </div>
+                <div class="item">
+                    <div class="licon"><span class="iconfont icon-renqun"></span></div>
+                    <div class="con">Chat</div>
+                    <div class="ricon"></div>
                 </div>
-            </div>  
-        </div>
-        <div class="share">
-            <div class="share_box">
-                <div class="left">
-                    分享：
-                    <img src="picture/icon1.jpg" alt="">
-                    <img src="picture/icon2.jpg" alt="">
-                    <img src="picture/icon3.jpg" alt="">
-                    <img src="picture/icon4.jpg" alt="">
-                    <img src="picture/icon5.jpg" alt="">
-                    <img src="picture/icon6.jpg" alt="">
+                <div class="item">
+                    <div class="licon"><span class="iconfont icon-sousuo"></span></div>
+                    <div class="con">Intercom</div>
+                    <div class="ricon"><span class="iconfont icon-caidan1"></span></div>
                 </div>
-                <div class="right">
-                    <input type="text">
-                    <span></span>
+                <div class="item">
+                    <div class="licon">
+                        <span class="iconfont icon-gengduo-a"></span>
+                    </div>
+                    <div class="con">Setting</div>
+                    <div class="ricon"></div>
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <div class="footer_box">
-                <div class="item">
-                    <p>企业简介</p>
-                    <p>企业简介</p>
-                    <p>企业简介</p>
-                    <p>企业简介</p>
-                    <p>企业简介</p>
-                    <p>企业简介</p>
-                </div>
-                <div class="item">
-                    <p>下属企业</p>
-                    <p>下属企业</p>
-                    <p>下属企业</p>
-                    <p>下属企业</p>
-                    <p>下属企业</p>
-                    <p>下属企业</p>
-                </div>
-                <div class="item">
-                    <p>新闻中心</p>
-                    <p>新闻中心</p>
-                    <p>新闻中心</p>
-                    <p>新闻中心</p>
-                    <p>新闻中心</p>
-                    <p>新闻中心</p>
-                </div>
-                <div class="item">
-                    <p>主营业务</p>
-                    <p>主营业务</p>
-                    <p>主营业务</p>
-                    <p>主营业务</p>
-                    <p>主营业务</p>
-                    <p>主营业务</p>
-                </div>
-                <div class="item">
-                    <p>企业文化</p>
-                    <p>企业文化</p>
-                    <p>企业文化</p>
-          
-                </div>
-                <div class="item">
-                    <p>企业招聘</p>
-                    <p>企业招聘</p>
-                    <p>企业招聘</p>
-                </div>
-                <div class="item">
-                    <p>联系我们</p>
-                    <p>联系我们</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer_bottom">
-             <div class="footer_bottom_box">
-                 <p>版权所有：xxxx企业名称    备案号：？icp备00000号</p>
-                 <p>服务热线：0000-000-000</p>
-             </div>
+        <div class="content">
+        <iframe class="iframe" src=""></iframe>
         </div>
     </div>
 </body>
+
 </html>
