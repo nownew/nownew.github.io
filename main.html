@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; /* 设置方框之间的间距 */
+    }
+    .box {
+      width: 200px; /* 修改为您需要的宽度 */
+      padding: 20px;
+      box-shadow: 5px 5px 5px grey; /* 添加阴影效果 */
+      margin-bottom: 20px; /* 修改为您需要的下边距 */
+      border-radius: 10px;
+    }
+    .text {
+      font-weight: bold;
+      text-align: center;
+    }
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- 方框内容将在此动态生成 -->
+  </div>
+  
+  <script>
+    // 从 data.json 加载数据
+    var data = [
+  {
+    "text": "Magic-API",
+    "icon": "图标1",
+    "details": "Magic-API管理系统",
+    "url": "http://magic.nownew.cloud:8888/index"
+  },
+  {
+    "text": "第二个矩形方框的文字内容",
+    "icon": "图标2",
+    "details": "详细内容2",
+    "url": ""
+  },
+  {
+    "text": "第三个矩形方框的文字内容",
+    "icon": "图标3",
+    "details": "详细内容3",
+    "url": ""
+  }
+]
+
+  const container = document.getElementById('container');
+
+        // 遍历数据并创建矩形方框
+        data.forEach(item => {
+          const box = document.createElement('div');
+          box.className = 'box';
+
+          const text = document.createElement('div');
+          text.className = 'text';
+          text.textContent = item.text;
+          box.appendChild(text);
+
+          const content = document.createElement('div');
+          content.className = 'content';
+
+          const icon = document.createElement('div');
+          icon.textContent = item.icon;
+          content.appendChild(icon);
+
+          const details = document.createElement('div');
+          details.textContent = item.details;
+          content.appendChild(details);
+
+          box.appendChild(content);
+          container.appendChild(box);
+        })
+  </script>
+</body>
+</html>
