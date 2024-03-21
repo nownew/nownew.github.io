@@ -13,5 +13,10 @@
     "text": "第三个矩形方框的文字内容",
     "icon": "图标3",
     "details": "详细内容3"
+  },
+  {
+    "text": "Linda",
+    "icon": "lyx",
+    "details": "ldd"
   }
 ]
