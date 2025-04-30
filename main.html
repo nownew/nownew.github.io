@@ -14,7 +14,7 @@
 <body>
     <div class="wrap">
         <div class="nav">
-            <!-- 固定按钮 -->
+            <!-- 固定按钮，新增 -->
             <div class="pin-btn" id="pinBtn" title="固定/取消固定">
                 <span class="iconfont icon-ding"></span>
             </div>
@@ -114,57 +114,57 @@
             </div>
         </div>
         <div class="content">
-        <iframe class="iframe" src="/pages/navigation.html" style="height: 99vh; width: 100%; border: none;"></iframe>
+            <iframe class="iframe" src="/pages/navigation.html" style="height: 99vh; width: 100%; border: none;"></iframe>
         </div>
     </div>
     <style>
-    /* ... existing code ... */
-    .pin-btn {
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        cursor: pointer;
-        z-index: 10;
-        font-size: 20px;
-        color: #888;
-        transition: color 0.2s;
-    }
-    .pin-btn.pinned {
-        color: #007bff;
-    }
-    .nav {
-        position: relative;
-        width: 60px;
-        transition: width 0.3s;
-    }
-    .nav.expanded {
-        width: 220px;
-    }
-    /* ... existing code ... */
+        .pin-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 20px;
+            color: #888;
+            transition: color 0.2s;
+        }
+        .pin-btn.pinned {
+            color: #007bff;
+        }
+        .nav {
+            position: relative;
+            width: 60px;
+            transition: width 0.3s;
+        }
+        .nav.expanded {
+            width: 220px;
+        }
+        /* ... 你原有的其他样式 ... */
     </style>
     <script>
-    const nav = document.querySelector('.nav');
-    const pinBtn = document.getElementById('pinBtn');
-    let isPinned = false;
+        // 固定按钮和导航栏展开/收缩逻辑
+        const nav = document.querySelector('.nav');
+        const pinBtn = document.getElementById('pinBtn');
+        let isPinned = false;
 
-    // 鼠标移入展开，移出收缩
-    nav.addEventListener('mouseenter', () => {
-        if (!isPinned) nav.classList.add('expanded');
-    });
-    nav.addEventListener('mouseleave', () => {
-        if (!isPinned) nav.classList.remove('expanded');
-    });
+        // 鼠标移入展开，移出收缩（未固定时才生效）
+        nav.addEventListener('mouseenter', () => {
+            if (!isPinned) nav.classList.add('expanded');
+        });
+        nav.addEventListener('mouseleave', () => {
+            if (!isPinned) nav.classList.remove('expanded');
+        });
 
-    // 固定按钮点击事件
-    pinBtn.addEventListener('click', () => {
-        isPinned = !isPinned;
-        pinBtn.classList.toggle('pinned', isPinned);
-        if (isPinned) {
-            nav.classList.add('expanded');
-        } else {
-            nav.classList.remove('expanded');
-        }
-    });
+        // 固定按钮点击事件
+        pinBtn.addEventListener('click', () => {
+            isPinned = !isPinned;
+            pinBtn.classList.toggle('pinned', isPinned);
+            if (isPinned) {
+                nav.classList.add('expanded');
+            } else {
+                nav.classList.remove('expanded');
+            }
+        });
     </script>
 </body>
 
