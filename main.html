@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="font/iconfont.css" />
+    <link rel="stylesheet" href="font1/iconfont.css" />
+    <link rel="stylesheet" href="css.css" />
+    <title>Nownew</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="nav">
+            <!-- 固定按钮 -->
+            <div class="pin-btn" id="pinBtn" title="固定/取消固定">
+                <span class="iconfont icon-ding"></span>
+            </div>
+            <!--按钮-->
+            <div class="btn">
+                <div class="btn-item"></div>
+                <div class="btn-item"></div>
+                <div class="btn-item"></div>
+            </div>
+            <!--头像-->
+            <div class="icon">
+                <div class="icon-img"><img src="img/eric.png" alt="" /></div>
+                <div class="icon-con">
+                    <p>Good Day</p>
+                    <h2>Nownew</h2>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="title">
+                <p>导航</p>
+            </div>
+            <div class="menu">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><span class="iconfont icon-wenjian"></span></div>
+                    <div class="con">Dashboard</div>
+                    <div class="ricon"><span class="iconfont icon-shezhi"></span></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><span class="iconfont icon-qipao1"></span></div>
+                    <div class="con">Products</div>
+                    <div class="ricon"></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span class="iconfont icon-shexiang1"></span>
+                    </div>
+                    <div class="con">Campaigns</div>
+                    <div class="ricon"></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span class="iconfont icon-xiaolian"></span>
+                    </div>
+                    <div class="con">Sales</div>
+                    <div class="ricon"><span class="iconfont icon-caidan1"></span></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span class="iconfont icon-shexiang"></span>
+                    </div>
+                    <div class="con">Discount</div>
+                    <div class="ricon"></div>
+                </div>
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon">
+                        <span class="iconfont icon-wenjian1"></span>
+                    </div>
+                    <div class="con">Payouts</div>
+                    <div class="ricon"></div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="title">
+                <p>设置</p>
+            </div>
+            <div class="serve">
+                <div class="item">
+                    <div class="licon"><span class="iconfont icon-caidan"></span></div>
+                    <div class="con">Software</div>
+                    <div class="ricon">
+                        <span class="iconfont icon-Dashboard"></span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="licon"><span class="iconfont icon-renqun"></span></div>
+                    <div class="con">Chat</div>
+                    <div class="ricon"></div>
+                </div>
+                <div class="item">
+                    <div class="licon"><span class="iconfont icon-sousuo"></span></div>
+                    <div class="con">Intercom</div>
+                    <div class="ricon"><span class="iconfont icon-caidan1"></span></div>
+                </div>
+                <div class="item">
+                    <div class="licon">
+                        <span class="iconfont icon-gengduo-a"></span>
+                    </div>
+                    <div class="con">Setting</div>
+                    <div class="ricon"></div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+        <iframe class="iframe" src="/pages/navigation.html" style="height: 99vh; width: 100%; border: none;"></iframe>
+        </div>
+    </div>
+    <style>
+    /* ... existing code ... */
+    .pin-btn {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        cursor: pointer;
+        z-index: 10;
+        font-size: 20px;
+        color: #888;
+        transition: color 0.2s;
+    }
+    .pin-btn.pinned {
+        color: #007bff;
+    }
+    .nav {
+        position: relative;
+        width: 60px;
+        transition: width 0.3s;
+    }
+    .nav.expanded {
+        width: 220px;
+    }
+    /* ... existing code ... */
+    </style>
+    <script>
+    const nav = document.querySelector('.nav');
+    const pinBtn = document.getElementById('pinBtn');
+    let isPinned = false;
+
+    // 鼠标移入展开，移出收缩
+    nav.addEventListener('mouseenter', () => {
+        if (!isPinned) nav.classList.add('expanded');
+    });
+    nav.addEventListener('mouseleave', () => {
+        if (!isPinned) nav.classList.remove('expanded');
+    });
+
+    // 固定按钮点击事件
+    pinBtn.addEventListener('click', () => {
+        isPinned = !isPinned;
+        pinBtn.classList.toggle('pinned', isPinned);
+        if (isPinned) {
+            nav.classList.add('expanded');
+        } else {
+            nav.classList.remove('expanded');
+        }
+    });
+    </script>
+</body>
+
+</html>
