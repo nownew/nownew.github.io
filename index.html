@@ -5,114 +5,128 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="font/iconfont.css" />
-    <link rel="stylesheet" href="font1/iconfont.css" />
+    <link rel="stylesheet" href="./font/iconfont.css" />
+    <link rel="stylesheet" href="./font1/iconfont.css" />
     <link rel="stylesheet" href="css.css" />
     <title>Nownew</title>
 </head>
 
 <body>
     <div class="wrap">
-        <div class="nav">
-            <!--按钮-->
-            <div class="btn">
-                <div class="btn-item"></div>
-                <div class="btn-item"></div>
-                <div class="btn-item"></div>
+        <div class="nav" id="nav">
+            <!--锁定按钮-->
+            <div class="lock-btn" id="lockBtn" onclick="toggleLock()">
+                <span class="lock-icon">&#x1F4CC;</span>
             </div>
-            <!--头像-->
-            <div class="icon">
-                <div class="icon-img"><img src="img/eric.png" alt="" /></div>
-                <div class="icon-con">
-                    <p>Good Day</p>
-                    <h2>Nownew</h2>
+            <div class="nav-fixed">
+                <!--按钮-->
+                <div class="btn">
+                    <div class="btn-item"></div>
+                    <div class="btn-item"></div>
+                    <div class="btn-item"></div>
                 </div>
-            </div>
-            <div class="line"></div>
-            <div class="title">
-                <p>导航</p>
-            </div>
-            <div class="menu">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><span class="iconfont icon-wenjian"></span></div>
-                    <div class="con">Dashboard</div>
-                    <div class="ricon"><span class="iconfont icon-shezhi"></span></div>
-                </div>
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><span class="iconfont icon-qipao1"></span></div>
-                    <div class="con">Products</div>
-                    <div class="ricon"></div>
-                </div>
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon">
-                        <span class="iconfont icon-shexiang1"></span>
+                <!--头像-->
+                <div class="icon">
+                    <div class="icon-img"><img src="./img/logo.png" alt="" /></div>
+                    <div class="icon-con">
+                        <p>Good Day</p>
+                        <h2>Nownew</h2>
                     </div>
-                    <div class="con">Campaigns</div>
-                    <div class="ricon"></div>
                 </div>
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon">
-                        <span class="iconfont icon-xiaolian"></span>
-                    </div>
-                    <div class="con">Sales</div>
-                    <div class="ricon"><span class="iconfont icon-caidan1"></span></div>
+                <div class="line"></div>
+                <div class="title">
+                    <p>导航</p>
                 </div>
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon">
-                        <span class="iconfont icon-shexiang"></span>
+                <div class="menu">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><span class="iconfont icon-wenjian"></span></div>
+                        <div class="con">Dashboard</div>
+                        <div class="ricon"><span class="iconfont icon-shezhi"></span></div>
                     </div>
-                    <div class="con">Discount</div>
-                    <div class="ricon"></div>
-                </div>
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon">
-                        <span class="iconfont icon-wenjian1"></span>
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><span class="iconfont icon-qipao1"></span></div>
+                        <div class="con">Products</div>
+                        <div class="ricon"></div>
                     </div>
-                    <div class="con">Payouts</div>
-                    <div class="ricon"></div>
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon">
+                            <span class="iconfont icon-shexiang1"></span>
+                        </div>
+                        <div class="con">Campaigns</div>
+                        <div class="ricon"></div>
+                    </div>
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon">
+                            <span class="iconfont icon-xiaolian"></span>
+                        </div>
+                        <div class="con">Sales</div>
+                        <div class="ricon"><span class="iconfont icon-caidan1"></span></div>
+                    </div>
                 </div>
             </div>
-            <div class="line"></div>
-            <div class="title">
-                <p>设置</p>
-            </div>
-            <div class="serve">
-                <div class="item">
-                    <div class="licon"><span class="iconfont icon-caidan"></span></div>
-                    <div class="con">Software</div>
-                    <div class="ricon">
-                        <span class="iconfont icon-Dashboard"></span>
+            <div class="nav-scroll">
+                <div class="line"></div>
+                <div class="title">
+                    <p>设置</p>
+                </div>
+                <div class="serve">
+                    <div class="item">
+                        <div class="licon">
+                            <span class="iconfont icon-shexiang"></span>
+                        </div>
+                        <div class="con">Discount</div>
+                        <div class="ricon"></div>
                     </div>
-                </div>
-                <div class="item">
-                    <div class="licon"><span class="iconfont icon-renqun"></span></div>
-                    <div class="con">Chat</div>
-                    <div class="ricon"></div>
-                </div>
-                <div class="item">
-                    <div class="licon"><span class="iconfont icon-sousuo"></span></div>
-                    <div class="con">Intercom</div>
-                    <div class="ricon"><span class="iconfont icon-caidan1"></span></div>
-                </div>
-                <div class="item">
-                    <div class="licon">
-                        <span class="iconfont icon-gengduo-a"></span>
+                    <div class="item">
+                        <div class="licon">
+                            <span class="iconfont icon-wenjian1"></span>
+                        </div>
+                        <div class="con">Payouts</div>
+                        <div class="ricon"></div>
                     </div>
-                    <div class="con">Setting</div>
-                    <div class="ricon"></div>
+                    <div class="item">
+                        <div class="licon"><span class="iconfont icon-caidan"></span></div>
+                        <div class="con">Software</div>
+                        <div class="ricon">
+                            <span class="iconfont icon-Dashboard"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="licon"><span class="iconfont icon-renqun"></span></div>
+                        <div class="con">Chat</div>
+                        <div class="ricon"></div>
+                    </div>
+                    <div class="item">
+                        <div class="licon"><span class="iconfont icon-sousuo"></span></div>
+                        <div class="con">Intercom</div>
+                        <div class="ricon"><span class="iconfont icon-caidan1"></span></div>
+                    </div>
+                    <div class="item">
+                        <div class="licon">
+                            <span class="iconfont icon-gengduo-a"></span>
+                        </div>
+                        <div class="con">Setting</div>
+                        <div class="ricon"></div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="content">
-        <iframe class="iframe" src="/pages/navigation.html" style="height: 99vh; width: 100%; border: none;"></iframe>
+        <iframe class="iframe" src="./pages/navigation.html" style="height: 99vh; width: 100%; border: none;"></iframe>
         </div>
     </div>
+<script>
+function toggleLock() {
+    var nav = document.getElementById('nav');
+    var btn = document.getElementById('lockBtn');
+    nav.classList.toggle('locked');
+    btn.querySelector('.lock-icon').innerHTML = nav.classList.contains('locked') ? '\u{1F4CC}' : '\u{1F4CD}';
+}
+</script>
 </body>
 
 </html>
